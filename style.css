@@ -1,0 +1,70 @@
+body{
+    background: url(https://wallpapers-clan.com/wp-content/uploads/2024/07/aesthetic-whale-underwater-desktop-wallpaper-preview.jpg) no-repeat center center/cover rgba(8, 8, 8, 0.249);
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion{
+    width: 65%;
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(8, 8, 8, 0.249);
+}
+
+.accordion .accordion-title{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.accordion .content-container .question{
+    font-weight: bold;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 18px 0;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 5px solid white;
+
+    position: relative;
+}
+
+.accordion .content-container .question::after{
+    content: "+";
+    position: absolute;
+    right: -5px;
+}
+
+.accordion .content-container .answer{
+    font-size: 22px;
+    padding-top: 15px;
+    line-height: 1.5;
+    width: 100%;
+    text-align: center;
+
+    height: 0;
+    overflow: hidden;
+    
+    transition: .5s;
+}
+
+/* Javascript Styling Link*/
+
+.accordion .content-container.active .answer{
+    height: 500px;
+    /*height: 150px; <-- For This exercise but you can change it */
+}
+
+.accordion .content-container.active .question{
+    font-size: 18px;
+    transition: .5s;
+}
+
+.accordion .content-container.active .question::after{
+    content: "-";
+    font-size: 32px;
+    transition: .5s;
+}
